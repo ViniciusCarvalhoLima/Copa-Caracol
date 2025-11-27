@@ -7,7 +7,7 @@ public class CarLapCounter : MonoBehaviour
 {
     [Header("Configurações da Corrida")]
     [Tooltip("Número de voltas necessárias para completar a corrida.")]
-    public int lapsToComplete = 4;
+    public int lapsToComplete = 3;
 
     [Header("Estado Atual (somente leitura)")]
     [SerializeField] private int totalCheckpoints = 0;
@@ -106,10 +106,10 @@ public class CarLapCounter : MonoBehaviour
                 LapsCompleted++;
                 CheckpointsPassedThisLap = 0; // reseta o contador de checkpoints da volta atual
 
-                if (LapsCompleted >= lapsToComplete)
+                if (LapsCompleted > lapsToComplete)
                 {
                     IsRaceCompleted = true;
-                    Debug.Log($"[{name}] Corrida COMPLETA! ({LapsCompleted} voltas)");
+                    Debug.Log($"[{name}] Corrida COMPLETA! ({lapsToComplete} voltas)");
                 }
             }
 
