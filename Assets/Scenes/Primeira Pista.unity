@@ -811,6 +811,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 1.5}
   smoothTime: 0.15
+  cameraLimits:
+    min: {x: -375, y: -180}
+    max: {x: 375, y: 180}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0

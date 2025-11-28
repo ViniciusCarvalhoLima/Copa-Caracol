@@ -1,6 +1,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CameraElimination : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class CameraElimination : MonoBehaviour
     private Transform leader;
     private Vector3 velocity = Vector3.zero;
     private float cameraZ; // z fixo da câmera
+
+    [SerializeField] private CameraLimits cameraLimits;
 
     void Start()
     {
@@ -36,6 +39,40 @@ public class CameraElimination : MonoBehaviour
                                       cameraZ);
 
         // suaviza usando SmoothDamp (melhor para 2D que Lerp em muitos casos)
-        transform.position = Vector3.SmoothDamp(transform.position, desired, ref velocity, smoothTime);
+        Vector3 desiredPosition = Vector3.SmoothDamp(transform.position, desired, ref velocity, smoothTime);
+
+        // calcula as margens da câmera baseado no tamanho
+        float cameraHeight = Camera.main.orthographicSize * 2f;
+        float cameraWidth = cameraHeight * Camera.main.aspect;
+        float halfWidth = cameraWidth * 0.5f;
+        float halfHeight = cameraHeight * 0.5f;
+
+        Vector3 clampedPosition = new Vector3(
+            Mathf.Clamp(desiredPosition.x, cameraLimits.min.x + halfWidth, cameraLimits.max.x - halfWidth),
+            Mathf.Clamp(desiredPosition.y, cameraLimits.min.y + halfHeight, cameraLimits.max.y - halfHeight),
+            desiredPosition.z
+        );
+
+        transform.position = clampedPosition;
     }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Vector3 bottomLeft = new Vector3(cameraLimits.min.x, cameraLimits.min.y, 0);
+        Vector3 topRight = new Vector3(cameraLimits.max.x, cameraLimits.max.y, 0);
+        Vector3 topLeft = new Vector3(cameraLimits.min.x, cameraLimits.max.y, 0);
+        Vector3 bottomRight = new Vector3(cameraLimits.max.x, cameraLimits.min.y, 0);
+        Gizmos.DrawLine(bottomLeft, topLeft);
+        Gizmos.DrawLine(topLeft, topRight);
+        Gizmos.DrawLine(topRight, bottomRight);
+        Gizmos.DrawLine(bottomRight, bottomLeft);
+    }
+}
+
+[Serializable]
+public class CameraLimits
+{
+    public Vector2 min;
+    public Vector2 max;
 }
