@@ -6,7 +6,6 @@ using UnityEngine;
 public class CarLapCounter : MonoBehaviour
 {
     [Header("Configurações da Corrida")]
-    [Tooltip("Número de voltas necessárias para completar a corrida.")]
     public int lapsToComplete = 3;
 
     [Header("Estado Atual (somente leitura)")]
@@ -23,7 +22,7 @@ public class CarLapCounter : MonoBehaviour
     public event Action<CarLapCounter> OnPassCheckpoint;
 
     private int carPosition = 0;
-    private static Checkpoint[] allCheckpoints; // cache global para todos os carros (mais rápido)
+    private static Checkpoint[] allCheckpoints;
 
     void Start()
     {
@@ -32,33 +31,19 @@ public class CarLapCounter : MonoBehaviour
 
     void InitializeCheckpoints()
     {
-        // Usa cache estático para evitar chamar FindObjectsByType em todos os carros
         if (allCheckpoints == null || allCheckpoints.Length == 0)
         {
             allCheckpoints = FindObjectsByType<Checkpoint>(FindObjectsSortMode.None);
         }
 
-        if (allCheckpoints == null || allCheckpoints.Length == 0)
-        {
-            Debug.LogError($"[{name}] Nenhum Checkpoint encontrado na cena. Adicione objetos com o script Checkpoint e tag \"CheckPoint\".");
-            return;
-        }
-
         totalCheckpoints = allCheckpoints.Length;
 
-        // Tenta encontrar a linha de chegada (primeiro checkpoint com isFinishLine = true)
+        // Tenta encontrar primeiro checkpoint com isFinishLine = true)
         var finish = allCheckpoints.FirstOrDefault(c => c.isFinishLine);
         if (finish != null)
         {
             finishIndex = finish.checkpointIndex;
         }
-        else
-        {
-            finishIndex = 0;
-            Debug.LogWarning($"[{name}] Nenhuma linha de chegada marcada. Assumindo checkpointIndex 0 como linha de chegada.");
-        }
-
-        // Começa imediatamente antes da linha de chegada
         currentCheckpointIndex = (finishIndex - 1 + totalCheckpoints) % totalCheckpoints;
         CheckpointsPassedThisLap = 0;
         LapsCompleted = 0;
@@ -84,7 +69,6 @@ public class CarLapCounter : MonoBehaviour
         Checkpoint cp = other.GetComponent<Checkpoint>();
         if (cp == null)
         {
-            Debug.LogWarning($"[{name}] Trigger com tag CheckPoint, mas sem Checkpoint.cs no objeto.");
             return;
         }
 
@@ -112,15 +96,7 @@ public class CarLapCounter : MonoBehaviour
                     Debug.Log($"[{name}] Corrida COMPLETA! ({lapsToComplete} voltas)");
                 }
             }
-
-            // Notifica o PositionHandler
             OnPassCheckpoint?.Invoke(this);
-
-            Debug.Log($"[{name}] Passou Checkpoint {cp.checkpointIndex} (finish={cp.isFinishLine}) | Volta {LapsCompleted}/{lapsToComplete}");
-        }
-        else
-        {
-            Debug.Log($"[{name}] Passou checkpoint {cp.checkpointIndex} fora da ordem (esperava {expectedNext}). Ignorando.");
         }
     }
 }

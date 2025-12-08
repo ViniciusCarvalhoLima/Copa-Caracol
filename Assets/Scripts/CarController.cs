@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Boost))]
 public class CarController : MonoBehaviour
 {
     public enum ControlScheme { Player1, Player2 }
@@ -18,12 +19,14 @@ public class CarController : MonoBehaviour
     float RotationAngle = 0;
     float VelocityVsUp = 0;
 
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
+    Boost boost;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         RotationAngle = rb.rotation;
+        boost = GetComponent<Boost>();
     }
 
     void Update()
@@ -52,6 +55,8 @@ public class CarController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.A)) SteeringInput = -1;
             else if (Input.GetKey(KeyCode.D)) SteeringInput = 1;
+
+            if (Input.GetKey(KeyCode.LeftShift)) boost.ActivateBoost();
         }
         else if (controlScheme == ControlScheme.Player2)
         {
@@ -61,6 +66,8 @@ public class CarController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftArrow)) SteeringInput = -1;
             else if (Input.GetKey(KeyCode.RightArrow)) SteeringInput = 1;
+
+            if (Input.GetKey(KeyCode.Space)) boost.ActivateBoost();
         }
     }
 
@@ -86,7 +93,7 @@ public class CarController : MonoBehaviour
 
     void ApplySteering()
     {
-        // Calcula fator de rotação baseado na velocidade
+        // Calcula rotação baseado na velocidade
         float minSpeedTurning = rb.linearVelocity.magnitude / 8;
         minSpeedTurning = Mathf.Clamp01(minSpeedTurning);
 

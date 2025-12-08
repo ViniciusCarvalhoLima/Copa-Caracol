@@ -3,10 +3,9 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class Checkpoint : MonoBehaviour
 {
-    [Tooltip("Índice do checkpoint. Deve ser único e variar de 0 a N-1")]
+    // Índice do checkpoint deve ser único e variar de 0 a N
     public int checkpointIndex = 0;
 
-    [Tooltip("Marque true apenas no checkpoint que representa a linha de chegada")]
     public bool isFinishLine = false;
 
     void Reset()
