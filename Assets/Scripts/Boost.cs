@@ -5,6 +5,8 @@ using System.Collections;
 [RequireComponent(typeof(CarLapCounter))]
 public class Boost : MonoBehaviour
 {
+
+    [SerializeField] private BoostBar boostBar;
     public float SpeedBoost = 35f;
     public float BoostDuration = 2f;
 
@@ -12,10 +14,26 @@ public class Boost : MonoBehaviour
     private CarLapCounter carLapCounter;
     private PositionHandler positionHandler;
     private bool isBoostActive = false;
-    private bool canActivateBoost = true;
+    private bool canActivateBoost = true;    
 
     public float cooldownTimeProgress = 0f;
     private Coroutine boostCooldownCoroutine;
+
+
+    public void Update()
+    {
+         if(boostBar != null && boostBar.IsBoostFull())
+        {
+            canActivateBoost = true;
+            print("Boost is ready to use.");
+        }
+        else
+        {
+            canActivateBoost = false;
+            print("Boost is not ready yet.");
+        }
+    }
+
     void Start()
     {
         carController = GetComponent<CarController>();

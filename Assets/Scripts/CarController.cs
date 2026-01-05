@@ -55,8 +55,6 @@ public class CarController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.A)) SteeringInput = -1;
             else if (Input.GetKey(KeyCode.D)) SteeringInput = 1;
-
-            if (Input.GetKey(KeyCode.LeftShift)) boost.ActivateBoost();
         }
         else if (controlScheme == ControlScheme.Player2)
         {
@@ -66,8 +64,6 @@ public class CarController : MonoBehaviour
 
             if (Input.GetKey(KeyCode.LeftArrow)) SteeringInput = -1;
             else if (Input.GetKey(KeyCode.RightArrow)) SteeringInput = 1;
-
-            if (Input.GetKey(KeyCode.Space)) boost.ActivateBoost();
         }
     }
 
