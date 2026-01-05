@@ -45,8 +45,17 @@ TagManager:
   - name: Bg
     uniqueID: 2616941359
     locked: 0
-  - name: Player
+  - name: Bg2
     uniqueID: 3040568899
+    locked: 0
+  - name: pista
+    uniqueID: 255516901
+    locked: 0
+  - name: zebra
+    uniqueID: 2863635933
+    locked: 0
+  - name: Player
+    uniqueID: 2086503863
     locked: 0
   m_RenderingLayers:
   - Default
