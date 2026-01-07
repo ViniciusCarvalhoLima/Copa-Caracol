@@ -42,8 +42,6 @@ public class PositionHandler : MonoBehaviour
         // Atualiza a posição atual do carro individualmente
         int position = carLapCounters.IndexOf(carLapCounter) + 1;
         carLapCounter.SetCarPosition(position);
-
-        Debug.Log($"[{carLapCounter.name}] Posição atual: {position}");
     }
 
     // Recalcula a ordem dos carros com base no progresso

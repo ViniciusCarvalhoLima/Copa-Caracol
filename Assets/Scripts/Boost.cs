@@ -7,33 +7,36 @@ public class Boost : MonoBehaviour
 {
 
     [SerializeField] private BoostBar boostBar;
-    public float SpeedBoost = 35f;
+    public float AccelerationBoost = 15f;
+    public float SpeedBoost = 22f;
     public float BoostDuration = 2f;
 
     private CarController carController;
     private CarLapCounter carLapCounter;
     private PositionHandler positionHandler;
     private bool isBoostActive = false;
-    private bool canActivateBoost = true;    
+    private bool canActivateBoost = false;    
 
     public float cooldownTimeProgress = 0f;
     private Coroutine boostCooldownCoroutine;
 
 
-    public void Update()
-    {
-         if(boostBar != null && boostBar.IsBoostFull())
-        {
-            canActivateBoost = true;
-            print("Boost is ready to use.");
-        }
-        else
-        {
-            canActivateBoost = false;
-            print("Boost is not ready yet.");
-        }
-    }
+void Update()
+{
+    if (boostBar == null) return;
 
+    bool boostReady = boostBar.IsBoostFull();
+
+    if (boostReady != canActivateBoost)
+    {
+        canActivateBoost = boostReady;
+
+        if (canActivateBoost)
+            Debug.Log("Boost is ready to use.");
+        else
+            Debug.Log("Boost is not ready yet.");
+    }
+}
     void Start()
     {
         carController = GetComponent<CarController>();
@@ -62,16 +65,20 @@ public class Boost : MonoBehaviour
 
         float originalMaxSpeed = carController.MaxSpeed;
         carController.MaxSpeed += SpeedBoost;
+        carController.AccelerationFactor += AccelerationBoost;
 
         Debug.Log($"[{gameObject.name}] Speed boosted to {carController.MaxSpeed}");
+        Debug.Log($"[{gameObject.name}] Acceleration boosted to {carController.AccelerationFactor}");
 
         yield return new WaitForSeconds(BoostDuration);
 
         carController.MaxSpeed = originalMaxSpeed;
+        carController.AccelerationFactor -= AccelerationBoost;
         carController.rb.linearVelocity = Vector2.Min(carController.rb.linearVelocity, carController.rb.linearVelocity.normalized * originalMaxSpeed);
         isBoostActive = false;
 
         Debug.Log($"[{gameObject.name}] Speed returned to normal ({originalMaxSpeed})");
+        Debug.Log($"[{gameObject.name}] Acceleration returned to normal ({carController.AccelerationFactor})");
 
         boostCooldownCoroutine = StartCoroutine(CooldownCoroutine(5f));
     }
@@ -87,4 +94,21 @@ public class Boost : MonoBehaviour
         }
         canActivateBoost = true;
     }
+
+    public bool CanUseBoost()
+{
+    return canActivateBoost && !isBoostActive;
+}
+
+public bool CanActivateBoost()
+{
+    if (isBoostActive)
+        return false;
+
+    int carPosition = carLapCounter.GetCarPosition();
+    int totalCars = positionHandler.carLapCounters.Count;
+
+    return canActivateBoost && carPosition == totalCars;
+}
+
 }

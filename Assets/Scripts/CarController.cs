@@ -10,6 +10,8 @@ public class CarController : MonoBehaviour
 
     [Header("Configuração de Movimento")]
     public float AccelerationFactor = 10.0f;
+    public float BrakeFactor = 1f;
+
     public float TurnFactor = 3.5f;
     public float DriftFactor = 0.05f;
     public float MaxSpeed = 12;
@@ -68,24 +70,31 @@ public class CarController : MonoBehaviour
     }
 
     void ApplyEngineForce()
-    {
-        VelocityVsUp = Vector2.Dot(transform.up, rb.linearVelocity);
+{
+    VelocityVsUp = Vector2.Dot(transform.up, rb.linearVelocity);
 
-        if (VelocityVsUp > MaxSpeed && AccelerationInput > 0)
-            return;
-        if (VelocityVsUp < -MaxSpeed * 0.5f && AccelerationInput < 0)
-            return;
-        if (rb.linearVelocity.sqrMagnitude > MaxSpeed * MaxSpeed && AccelerationInput > 0)
-            return;
+    if (VelocityVsUp > MaxSpeed && AccelerationInput > 0)
+        return;
+    if (VelocityVsUp < -MaxSpeed * 0.5f && AccelerationInput < 0)
+        return;
+    if (rb.linearVelocity.sqrMagnitude > MaxSpeed * MaxSpeed && AccelerationInput > 0)
+        return;
 
-        if (Mathf.Approximately(AccelerationInput, 0))
-            rb.linearDamping = Mathf.Lerp(rb.linearDamping, 3.0f, Time.fixedDeltaTime * 3);
-        else
-            rb.linearDamping = 0;
+    if (Mathf.Approximately(AccelerationInput, 0))
+        rb.linearDamping = Mathf.Lerp(rb.linearDamping, 1.5f, Time.fixedDeltaTime * 3);
+    else
+        rb.linearDamping = 0;
 
-        Vector2 engineForceVector = transform.up * AccelerationInput * AccelerationFactor;
-        rb.AddForce(engineForceVector, ForceMode2D.Force);
-    }
+    float appliedFactor = AccelerationInput > 0
+        ? AccelerationFactor       
+        : BrakeFactor;            
+
+    Vector2 engineForceVector =
+        transform.up * AccelerationInput * appliedFactor;
+
+    rb.AddForce(engineForceVector, ForceMode2D.Force);
+}
+
 
     void ApplySteering()
     {

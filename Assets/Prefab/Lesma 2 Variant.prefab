@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 127960762184666452, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0b9a648bed7fdc140baa42c849f1360a, type: 3}
+      objectReference: {fileID: 21300000, guid: 09a84a17dd6eb7b4aa8f3dee9261b078, type: 3}
     - target: {fileID: 127960762184666452, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -24,13 +24,57 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 127960762184666452, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 127960762184666452, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 2086503863
+      objectReference: {fileID: 0}
+    - target: {fileID: 127960762184666452, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 988227193787323169, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
       propertyPath: SpeedBoost
       value: 35
       objectReference: {fileID: 0}
+    - target: {fileID: 3145770489049637170, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5401447
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145770489049637170, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: m_Size.y
+      value: 4.9780493
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145770489049637170, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0075462265
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145770489049637170, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.22163339
+      objectReference: {fileID: 0}
     - target: {fileID: 4078679036454886068, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
       propertyPath: m_Name
       value: Lesma 2 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440741410854914610, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: MaxSpeed
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440741410854914610, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: TurnFactor
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440741410854914610, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: BrakeFactor
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440741410854914610, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: AccelerationFactor
+      value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 7581733921334801317, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
       propertyPath: m_LocalScale.x
@@ -87,5 +131,27 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4078679036454886068, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7484130760124504763}
   m_SourcePrefab: {fileID: 100100000, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+--- !u!1 &8048428121871222419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4078679036454886068, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+  m_PrefabInstance: {fileID: 6281292523958688807}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7484130760124504763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8048428121871222419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd7eb7045cf9ee4c8f3b12853670c3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boostKey: 305
+  boostBar: {fileID: 0}
