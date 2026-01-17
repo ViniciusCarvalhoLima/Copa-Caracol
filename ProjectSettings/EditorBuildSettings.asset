@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Segunda Pista.unity
+    path: Assets/Scenes/Menu.unity
+    guid: 2e058da9c4a0ee1459d5f3d1c6da7052
+  - enabled: 1
+    path: "Assets/Scenes/TelaDeSele\xE7\xE3o.unity"
+    guid: 5af5e99804b58ce478943f56cb5058ff
+  - enabled: 1
+    path: "Assets/Scenes/Lama\xE7al.unity"
+    guid: 97067a3811eb24e4cb93d598a934c853
+  - enabled: 1
+    path: Assets/Scenes/Jardim.unity
     guid: 4423a60242dcdcb4b8db71de12f90b3b
+  - enabled: 1
+    path: Assets/Scenes/Piquenique.unity
+    guid: 90bb2e15ebf903b4d860f112adcdfd62
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

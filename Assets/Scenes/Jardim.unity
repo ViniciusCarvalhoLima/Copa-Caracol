@@ -145,7 +145,7 @@ Transform:
   m_GameObject: {fileID: 4307617}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.5508, y: -114.1876, z: 0.9308546}
+  m_LocalPosition: {x: 52, y: -114, z: 1}
   m_LocalScale: {x: 3.1378686, y: 2.690484, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 106556841}
   m_Layer: 0
   m_Name: GameObject (22)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 14
   isFinishLine: 0
 --- !u!61 &106556842
 BoxCollider2D:
@@ -409,7 +409,7 @@ GameObject:
   - component: {fileID: 113946227}
   m_Layer: 0
   m_Name: GameObject (21)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -441,7 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 6
   isFinishLine: 0
 --- !u!61 &113946228
 BoxCollider2D:
@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 373867221}
   m_Layer: 0
   m_Name: GameObject (18)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 21
   isFinishLine: 0
 --- !u!61 &373867222
 BoxCollider2D:
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 457149576}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +631,7 @@ Transform:
   m_GameObject: {fileID: 457149574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -76.4, y: -94.4, z: 0}
+  m_LocalPosition: {x: -76.4, y: -96.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 539277230}
   m_Layer: 0
   m_Name: GameObject (7)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -808,7 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 8
   isFinishLine: 0
 --- !u!61 &539277231
 BoxCollider2D:
@@ -869,7 +869,7 @@ GameObject:
   - component: {fileID: 551460272}
   m_Layer: 0
   m_Name: GameObject (8)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -901,7 +901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 9
   isFinishLine: 0
 --- !u!61 &551460273
 BoxCollider2D:
@@ -1018,88 +1018,98 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -138.3371, y: 11.141502}
-  - {x: -171.08505, y: 11.43251}
-  - {x: -180.18112, y: 10.304283}
-  - {x: -192.60559, y: 6.651169}
+  - {x: -131.95056, y: 8.075958}
+  - {x: -167.89177, y: 8.877892}
+  - {x: -177.49878, y: 8.516052}
+  - {x: -190.9451, y: 5.757057}
   - {x: -201.14543, y: 2.928543}
   - {x: -208.03752, y: -2.2223206}
-  - {x: -212.83635, y: -8.931732}
-  - {x: -216.33267, y: -14.72715}
-  - {x: -218.31691, y: -21.945122}
-  - {x: -220.04485, y: -29.19674}
-  - {x: -220.13966, y: -38.58264}
-  - {x: -220.22409, y: -47.735043}
-  - {x: -220.4229, y: -65.143425}
-  - {x: -220.54901, y: -88.94433}
-  - {x: -219.30537, y: -95.37647}
-  - {x: -215.91263, y: -102.14538}
-  - {x: -212.4112, y: -106.95633}
-  - {x: -207.33226, y: -112.91513}
-  - {x: -200.14854, y: -117.15865}
-  - {x: -194.63354, y: -119.168945}
-  - {x: -185.70789, y: -121.75014}
-  - {x: -181.92322, y: -124.04406}
-  - {x: -179.63689, y: -126.67234}
-  - {x: -178.13928, y: -129.2537}
-  - {x: -176.50864, y: -134.83403}
-  - {x: -176.00954, y: -139.6046}
-  - {x: -176.54593, y: -144.93004}
-  - {x: -177.06062, y: -146.57234}
-  - {x: -179.76486, y: -150.45686}
-  - {x: -197.95465, y: -162.63708}
-  - {x: -210.2255, y: -169.75008}
-  - {x: -217.39622, y: -179.24982}
-  - {x: -221.10022, y: -189.45126}
-  - {x: -221.48528, y: -197.70909}
-  - {x: -217.59335, y: -208.89653}
-  - {x: -209.58858, y: -215.78403}
-  - {x: -198.79085, y: -219.73033}
-  - {x: -187.14601, y: -220.49135}
-  - {x: -129.90033, y: -219.87558}
-  - {x: -19.449633, y: -220.10086}
-  - {x: -0.09174919, y: -218.47601}
+  - {x: -213.09181, y: -6.888031}
+  - {x: -216.07721, y: -11.406151}
+  - {x: -218.7001, y: -15.814041}
+  - {x: -221.0667, y: -22.427002}
+  - {x: -223.07748, y: -34.495247}
+  - {x: -223.80055, y: -46.840927}
+  - {x: -223.9487, y: -63.738388}
+  - {x: -223.98563, y: -85.96798}
+  - {x: -222.7541, y: -91.54455}
+  - {x: -220.79283, y: -99.97395}
+  - {x: -218.31325, y: -105.04037}
+  - {x: -215.572, y: -110.48824}
+  - {x: -209.72836, y: -114.98723}
+  - {x: -203.83017, y: -119.55214}
+  - {x: -195.79863, y: -123.015335}
+  - {x: -189.20387, y: -125.01526}
+  - {x: -186.22826, y: -126.28915}
+  - {x: -183.19786, y: -129.2537}
+  - {x: -180.59602, y: -133.30125}
+  - {x: -178.69188, y: -138.45502}
+  - {x: -178.41125, y: -142.72006}
+  - {x: -178.9648, y: -146.82765}
+  - {x: -180.94066, y: -150.16293}
+  - {x: -197.0995, y: -162.85385}
+  - {x: -208.13217, y: -169.5452}
+  - {x: -213.7735, y: -172.95844}
+  - {x: -218.49483, y: -177.71768}
+  - {x: -221.73221, y: -183.57751}
+  - {x: -223.14308, y: -187.66376}
+  - {x: -223.91118, y: -196.81534}
+  - {x: -220.52995, y: -208.89653}
+  - {x: -216.24916, y: -214.02751}
+  - {x: -212.448, y: -217.25378}
+  - {x: -206.01881, y: -220.84949}
+  - {x: -199.18579, y: -222.91042}
+  - {x: -186.23003, y: -223.25644}
+  - {x: -129.90033, y: -222.55682}
+  - {x: -23.15098, y: -222.79884}
+  - {x: -8.507051, y: -222.19496}
+  - {x: 0.44303322, y: -219.54556}
   - {x: 12.258948, y: -211.45024}
   - {x: 20.309784, y: -202.861}
-  - {x: 33.845966, y: -189.11012}
-  - {x: 42.511406, y: -182.65053}
-  - {x: 53.647194, y: -176.93068}
-  - {x: 66.234604, y: -172.86346}
-  - {x: 77.25282, y: -170.82329}
-  - {x: 94.0597, y: -169.69418}
-  - {x: 108.14722, y: -170.54068}
-  - {x: 122.37015, y: -173.16995}
-  - {x: 139.49413, y: -179.33177}
-  - {x: 150.81989, y: -186.19205}
-  - {x: 157.10349, y: -191.63791}
-  - {x: 167.83707, y: -196.1749}
-  - {x: 181.80247, y: -196.80412}
+  - {x: 33.845966, y: -190.04599}
+  - {x: 42.645103, y: -183.45268}
+  - {x: 53.24611, y: -179.33717}
+  - {x: 65.96721, y: -175.26999}
+  - {x: 77.119125, y: -173.3635}
+  - {x: 91.78689, y: -172.63548}
+  - {x: 104.80483, y: -173.34828}
+  - {x: 118.0919, y: -176.11124}
+  - {x: 134.6811, y: -182.00569}
+  - {x: 144.53621, y: -187.79639}
+  - {x: 153.76111, y: -194.31183}
+  - {x: 164.22731, y: -198.98248}
+  - {x: 172.72264, y: -199.51173}
+  - {x: 180.06442, y: -199.07693}
   - {x: 194.93942, y: -193.02895}
-  - {x: 209.82037, y: -181.10686}
-  - {x: 216.21024, y: -170.82985}
-  - {x: 219.31212, y: -163.11409}
-  - {x: 219.99515, y: -153.35776}
-  - {x: 218.22229, y: -139.94579}
-  - {x: 210.84998, y: -121.86656}
-  - {x: 202.94122, y: -111.49295}
-  - {x: 179.5985, y: -85.98272}
-  - {x: 168.49478, y: -73.10127}
-  - {x: 168.0076, y: -70.03977}
+  - {x: 202.39041, y: -187.4599}
+  - {x: 209.0182, y: -180.83948}
+  - {x: 214.87328, y: -170.42876}
+  - {x: 216.63821, y: -163.91626}
+  - {x: 216.65277, y: -152.95667}
+  - {x: 214.47884, y: -141.28273}
+  - {x: 208.84454, y: -127.74915}
+  - {x: 205.30498, y: -121.831474}
+  - {x: 199.58134, y: -114.152855}
+  - {x: 176.37862, y: -88.642624}
+  - {x: 166.53485, y: -78.70107}
+  - {x: 164.9277, y: -73.39964}
+  - {x: 166.58336, y: -68.992584}
   - {x: 169.56065, y: -66.46122}
   - {x: 172.36113, y: -63.110806}
   - {x: 181.26013, y: -55.060204}
   - {x: 191.1326, y: -46.769466}
   - {x: 198.29054, y: -41.2529}
-  - {x: 203.60498, y: -35.237198}
-  - {x: 208.42062, y: -26.864746}
-  - {x: 210.89784, y: -16.509964}
-  - {x: 209.38791, y: -8.273842}
-  - {x: 205.6033, y: -0.7924576}
-  - {x: 200.26701, y: 4.464325}
-  - {x: 194.22235, y: 8.302818}
-  - {x: 184.293, y: 10.894295}
-  - {x: 176.84685, y: 10.980362}
-  - {x: 119.01346, y: 11.133003}
+  - {x: 202.62502, y: -35.237198}
+  - {x: 206.46071, y: -26.724754}
+  - {x: 207.95795, y: -19.729843}
+  - {x: 207.98796, y: -13.453659}
+  - {x: 205.8833, y: -8.072197}
+  - {x: 201.10698, y: -2.1154327}
+  - {x: 195.9023, y: 2.2830353}
+  - {x: 187.79288, y: 6.834442}
+  - {x: 178.10681, y: 8.180458}
+  - {x: 145.4181, y: 8.3703}
+  - {x: 126.2932, y: 8.75309}
   - {x: 108.40518, y: 9.934074}
   - {x: 103.326836, y: 8.677956}
   - {x: 99.555244, y: 6.771019}
@@ -1109,25 +1119,33 @@ EdgeCollider2D:
   - {x: 78.29886, y: -17.048668}
   - {x: 20.786152, y: -74.55528}
   - {x: 7.464058, y: -85.20798}
-  - {x: -5.9855824, y: -90.23555}
-  - {x: -20.426683, y: -90.72062}
-  - {x: -66.46381, y: -89.57902}
-  - {x: -74.76747, y: -88.97731}
-  - {x: -77.29978, y: -88.06341}
-  - {x: -78.16639, y: -86.04047}
-  - {x: -76.7936, y: -83.51485}
-  - {x: -73.96105, y: -80.92072}
+  - {x: -4.0054035, y: -91.149475}
+  - {x: -10.1505375, y: -92.48098}
+  - {x: -18.29418, y: -93.4624}
+  - {x: -38.745216, y: -93.39374}
+  - {x: -63.72203, y: -92.62544}
+  - {x: -71.67641, y: -92.39973}
+  - {x: -75.59557, y: -92.14679}
+  - {x: -79.174126, y: -91.61782}
+  - {x: -80.9555, y: -90.49857}
+  - {x: -81.33588, y: -88.20224}
+  - {x: -77.06897, y: -83.14769}
+  - {x: -73.97986, y: -80.455505}
   - {x: -67.1028, y: -74.43289}
   - {x: -49.806396, y: -60.266945}
-  - {x: -39.509315, y: -51.79578}
-  - {x: -30.530851, y: -38.213737}
-  - {x: -29.063139, y: -26.346123}
-  - {x: -29.793322, y: -14.492317}
-  - {x: -32.409195, y: -10.762123}
-  - {x: -41.843895, y: 1.9195862}
-  - {x: -59.062332, y: 10.422356}
-  - {x: -74.222916, y: 10.917557}
-  - {x: -140.07648, y: 11.213448}
+  - {x: -43.79799, y: -55.16872}
+  - {x: -40.78662, y: -51.284855}
+  - {x: -35.89955, y: -44.507877}
+  - {x: -32.83, y: -37.702812}
+  - {x: -31.13957, y: -31.272835}
+  - {x: -31.234564, y: -26.72931}
+  - {x: -33.114323, y: -18.324242}
+  - {x: -34.963806, y: -12.550362}
+  - {x: -42.99347, y: -2.6787262}
+  - {x: -58.040474, y: 5.9517746}
+  - {x: -72.434685, y: 8.107475}
+  - {x: -103.867226, y: 8.297615}
+  - {x: -136.62775, y: 8.403366}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -1145,7 +1163,7 @@ GameObject:
   - component: {fileID: 797939738}
   m_Layer: 0
   m_Name: GameObject (3)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1177,7 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 3
   isFinishLine: 0
 --- !u!61 &797939739
 BoxCollider2D:
@@ -1336,7 +1354,7 @@ GameObject:
   - component: {fileID: 969256239}
   m_Layer: 0
   m_Name: GameObject (14)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1368,7 +1386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 16
   isFinishLine: 0
 --- !u!61 &969256240
 BoxCollider2D:
@@ -1429,7 +1447,7 @@ GameObject:
   - component: {fileID: 999130211}
   m_Layer: 0
   m_Name: GameObject (15)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1461,7 +1479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 17
   isFinishLine: 0
 --- !u!61 &999130212
 BoxCollider2D:
@@ -1522,7 +1540,7 @@ GameObject:
   - component: {fileID: 1051229863}
   m_Layer: 0
   m_Name: GameObject (10)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1554,7 +1572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 11
   isFinishLine: 0
 --- !u!61 &1051229864
 BoxCollider2D:
@@ -1628,7 +1646,7 @@ Transform:
   m_GameObject: {fileID: 1061758417}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -99.5, y: -202.1, z: 0.9308546}
+  m_LocalPosition: {x: -99.5, y: -202, z: 0.9308546}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1738,7 +1756,7 @@ GameObject:
   - component: {fileID: 1159244895}
   m_Layer: 0
   m_Name: GameObject (11)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1770,7 +1788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 12
   isFinishLine: 0
 --- !u!61 &1159244896
 BoxCollider2D:
@@ -1831,7 +1849,7 @@ GameObject:
   - component: {fileID: 1165365235}
   m_Layer: 0
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1845,7 +1863,7 @@ Transform:
   m_GameObject: {fileID: 1165365233}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.6, y: -93.7, z: 0}
+  m_LocalPosition: {x: -22.1, y: -95.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1863,7 +1881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 1
   isFinishLine: 0
 --- !u!61 &1165365236
 BoxCollider2D:
@@ -1924,7 +1942,7 @@ GameObject:
   - component: {fileID: 1193847899}
   m_Layer: 0
   m_Name: GameObject (23)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1956,7 +1974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 20
   isFinishLine: 0
 --- !u!61 &1193847900
 BoxCollider2D:
@@ -2028,7 +2046,7 @@ GameObject:
   - component: {fileID: 1343031480}
   m_Layer: 0
   m_Name: GameObject (19)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2060,7 +2078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 22
   isFinishLine: 0
 --- !u!61 &1343031481
 BoxCollider2D:
@@ -2121,7 +2139,7 @@ GameObject:
   - component: {fileID: 1369493379}
   m_Layer: 0
   m_Name: GameObject (12)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2153,7 +2171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 13
   isFinishLine: 0
 --- !u!61 &1369493380
 BoxCollider2D:
@@ -2231,11 +2249,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2937527948566378827, guid: 7070177519a872d45b2317dda6aa0f82, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -80.7
+      value: -111
       objectReference: {fileID: 0}
     - target: {fileID: 2937527948566378827, guid: 7070177519a872d45b2317dda6aa0f82, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -50.2
+      value: -40.1
       objectReference: {fileID: 0}
     - target: {fileID: 2937527948566378827, guid: 7070177519a872d45b2317dda6aa0f82, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2269,6 +2287,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4992413367066876245, guid: 7070177519a872d45b2317dda6aa0f82, type: 3}
+      propertyPath: 'carLapCounters.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1896999292}
+    - target: {fileID: 4992413367066876245, guid: 7070177519a872d45b2317dda6aa0f82, type: 3}
+      propertyPath: 'carLapCounters.Array.data[1]'
+      value: 
+      objectReference: {fileID: 484309752}
     - target: {fileID: 5368921717966177281, guid: 7070177519a872d45b2317dda6aa0f82, type: 3}
       propertyPath: orthographic size
       value: 90
@@ -2291,7 +2317,7 @@ GameObject:
   - component: {fileID: 1387098349}
   m_Layer: 0
   m_Name: GameObject (5)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2323,7 +2349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 5
   isFinishLine: 0
 --- !u!61 &1387098350
 BoxCollider2D:
@@ -2384,7 +2410,7 @@ GameObject:
   - component: {fileID: 1400072186}
   m_Layer: 0
   m_Name: GameObject (17)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2416,7 +2442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 19
   isFinishLine: 0
 --- !u!61 &1400072187
 BoxCollider2D:
@@ -2477,7 +2503,7 @@ GameObject:
   - component: {fileID: 1462842567}
   m_Layer: 0
   m_Name: GameObject (4)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2509,7 +2535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 4
   isFinishLine: 0
 --- !u!61 &1462842568
 BoxCollider2D:
@@ -2570,7 +2596,7 @@ GameObject:
   - component: {fileID: 1560590429}
   m_Layer: 0
   m_Name: GameObject (6)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2602,7 +2628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 7
   isFinishLine: 0
 --- !u!61 &1560590430
 BoxCollider2D:
@@ -2724,7 +2750,7 @@ GameObject:
   - component: {fileID: 1803783578}
   m_Layer: 0
   m_Name: GameObject (16)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2756,7 +2782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 18
   isFinishLine: 0
 --- !u!61 &1803783579
 BoxCollider2D:
@@ -2974,7 +3000,7 @@ GameObject:
   - component: {fileID: 1908490572}
   m_Layer: 0
   m_Name: GameObject (13)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3006,7 +3032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 15
   isFinishLine: 0
 --- !u!61 &1908490573
 BoxCollider2D:
@@ -3067,7 +3093,7 @@ GameObject:
   - component: {fileID: 2002098180}
   m_Layer: 0
   m_Name: GameObject (9)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3099,7 +3125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 10
   isFinishLine: 0
 --- !u!61 &2002098181
 BoxCollider2D:
@@ -3216,125 +3242,124 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -180.26204, y: -31.86028}
-  - {x: -181.63577, y: -33.07}
-  - {x: -184.03442, y: -35.84684}
-  - {x: -186.08046, y: -39.461662}
-  - {x: -188.14821, y: -43.178062}
-  - {x: -189.46074, y: -47.48344}
-  - {x: -190.53378, y: -52.24638}
-  - {x: -190.46501, y: -59.9445}
-  - {x: -190.23303, y: -66.996635}
-  - {x: -189.75671, y: -71.11846}
-  - {x: -188.2872, y: -80.52039}
-  - {x: -186.52834, y: -86.51799}
-  - {x: -184.29843, y: -90.43072}
-  - {x: -182.16194, y: -92.96018}
-  - {x: -174.83728, y: -97.7606}
-  - {x: -164.9227, y: -101.62288}
-  - {x: -157.82784, y: -106.09203}
-  - {x: -149.72849, y: -113.55498}
-  - {x: -143.76689, y: -120.90774}
-  - {x: -139.42017, y: -130.83725}
-  - {x: -138.28687, y: -138.88826}
-  - {x: -139.42615, y: -145.90016}
-  - {x: -143.45422, y: -154.15932}
+  - {x: -178.61371, y: -30.256504}
+  - {x: -182.03673, y: -32.713608}
+  - {x: -183.01501, y: -33.5307}
+  - {x: -186.20583, y: -36.76935}
+  - {x: -188.14934, y: -39.895382}
+  - {x: -190.69707, y: -43.966843}
+  - {x: -192.51018, y: -50.810204}
+  - {x: -193.81337, y: -56.926926}
+  - {x: -194.00836, y: -62.95081}
+  - {x: -193.88148, y: -69.21995}
+  - {x: -193.2252, y: -73.43278}
+  - {x: -190.67592, y: -84.83643}
+  - {x: -189.09886, y: -89.827385}
+  - {x: -185.13077, y: -95.410995}
+  - {x: -176.12856, y: -100.92566}
+  - {x: -166.21927, y: -105.64449}
+  - {x: -157.78424, y: -112.100464}
+  - {x: -149.80872, y: -120.34831}
+  - {x: -144.56691, y: -129.15897}
+  - {x: -142.6504, y: -136.87431}
+  - {x: -142.1114, y: -143.77432}
+  - {x: -144.3493, y: -153.59988}
   - {x: -146.34645, y: -157.30174}
   - {x: -156.56195, y: -166.30145}
-  - {x: -165.99916, y: -172.54718}
-  - {x: -183.60985, y: -185.62587}
-  - {x: -186.10088, y: -188.64314}
-  - {x: -186.19008, y: -190.36455}
-  - {x: -185.29369, y: -191.56776}
-  - {x: -183.75528, y: -192.41661}
-  - {x: -182.67654, y: -192.7506}
-  - {x: -179.21397, y: -192.57753}
-  - {x: -174.3409, y: -191.72617}
-  - {x: -156.08415, y: -184.50473}
-  - {x: -146.8331, y: -181.4188}
-  - {x: -133.0145, y: -179.14603}
-  - {x: -82.32465, y: -178.9094}
-  - {x: -25.937193, y: -179.09619}
-  - {x: -18.003736, y: -178.5513}
+  - {x: -165.80885, y: -173.11813}
+  - {x: -183.60985, y: -185.8162}
+  - {x: -186.85146, y: -188.36168}
+  - {x: -188.19696, y: -190.08026}
+  - {x: -188.92966, y: -191.22446}
+  - {x: -188.95738, y: -193.68333}
+  - {x: -184.87668, y: -194.6638}
+  - {x: -178.51341, y: -194.25949}
+  - {x: -165.47234, y: -189.42235}
+  - {x: -149.9625, y: -184.10112}
+  - {x: -136.29291, y: -181.82837}
+  - {x: -110.191154, y: -181.74074}
+  - {x: -34.729294, y: -181.92755}
+  - {x: -24.67483, y: -181.51486}
+  - {x: -17.258642, y: -180.33954}
   - {x: -8.236734, y: -175.1549}
   - {x: -3.262968, y: -170.78244}
   - {x: 16.361652, y: -153.73366}
-  - {x: 28.40007, y: -145.28899}
-  - {x: 39.801167, y: -139.39886}
-  - {x: 50.22153, y: -135.68224}
-  - {x: 65.568695, y: -131.40073}
-  - {x: 87.034775, y: -128.88084}
-  - {x: 104.954994, y: -128.95091}
-  - {x: 116.7095, y: -130.54034}
-  - {x: 129.47893, y: -133.38344}
-  - {x: 141.6126, y: -137.1999}
-  - {x: 152.83662, y: -142.23291}
-  - {x: 170.36203, y: -153.1709}
-  - {x: 174.29024, y: -153.7063}
-  - {x: 176.08241, y: -151.68732}
-  - {x: 176.00877, y: -148.05588}
-  - {x: 174.73276, y: -143.86182}
-  - {x: 172.86403, y: -140.92026}
-  - {x: 167.86711, y: -135.68689}
-  - {x: 134.44574, y: -103.83593}
-  - {x: 126.4328, y: -97.74283}
-  - {x: 113.73555, y: -85.86062}
-  - {x: 109.67973, y: -75.04652}
-  - {x: 110.08213, y: -68.03227}
+  - {x: 26.42937, y: -147.79715}
+  - {x: 35.322308, y: -142.98196}
+  - {x: 45.205204, y: -139.26532}
+  - {x: 58.223366, y: -135.52127}
+  - {x: 71.63682, y: -133.17207}
+  - {x: 88.79977, y: -131.98003}
+  - {x: 104.71929, y: -132.43355}
+  - {x: 119.2557, y: -134.89798}
+  - {x: 135.55438, y: -139.59795}
+  - {x: 148.80818, y: -144.53488}
+  - {x: 165.56625, y: -155.28104}
+  - {x: 169.54424, y: -156.12712}
+  - {x: 171.63977, y: -155.34706}
+  - {x: 173.45438, y: -152.6598}
+  - {x: 172.23895, y: -149.23306}
+  - {x: 170.37022, y: -145.33237}
+  - {x: 164.79782, y: -139.13985}
+  - {x: 131.7601, y: -108.6317}
+  - {x: 121.637024, y: -100.62029}
+  - {x: 110.66626, y: -87.39527}
+  - {x: 106.80227, y: -75.430176}
+  - {x: 108.35565, y: -68.03227}
   - {x: 115.1148, y: -59.63638}
   - {x: 125.81017, y: -48.844067}
   - {x: 136.62888, y: -41.77469}
   - {x: 145.75877, y: -36.90284}
-  - {x: 160.92476, y: -28.467491}
-  - {x: 160.00665, y: -27.107613}
-  - {x: 157.99425, y: -26.78936}
-  - {x: 152.9187, y: -26.657295}
-  - {x: 144.8395, y: -26.335815}
-  - {x: 137.1073, y: -26.493866}
-  - {x: 130.22336, y: -27.717522}
-  - {x: 125.84858, y: -30.160072}
+  - {x: 156.89317, y: -31.944542}
+  - {x: 153.86491, y: -29.773842}
+  - {x: 148.99448, y: -29.284714}
+  - {x: 144.87808, y: -29.429924}
+  - {x: 135.1353, y: -29.662964}
+  - {x: 130.453, y: -30.65281}
+  - {x: 128.28253, y: -31.321938}
+  - {x: 125.01679, y: -32.378174}
   - {x: 119.89412, y: -34.36902}
   - {x: 72.035164, y: -81.823944}
   - {x: 47.527943, y: -107.93078}
   - {x: 35.49923, y: -121.30346}
-  - {x: 14.105515, y: -133.81158}
-  - {x: -0.07141495, y: -135.14185}
-  - {x: -12.362665, y: -135.113}
-  - {x: -20.786032, y: -135.08472}
-  - {x: -92.28453, y: -134.7076}
-  - {x: -104.70931, y: -131.76315}
-  - {x: -114.83689, y: -124.76714}
-  - {x: -122.17475, y: -115.325485}
-  - {x: -126.37379, y: -103.70823}
-  - {x: -127.45037, y: -91.54054}
-  - {x: -125.42094, y: -79.294334}
-  - {x: -115.61353, y: -63.29753}
+  - {x: 20.15384, y: -134.76659}
+  - {x: 5.3402443, y: -138.00684}
+  - {x: -12.9993305, y: -138.29633}
+  - {x: -23.96935, y: -137.9497}
+  - {x: -91.966194, y: -137.89093}
+  - {x: -106.30097, y: -135.26482}
+  - {x: -117.93093, y: -128.72064}
+  - {x: -125.78446, y: -119.278984}
+  - {x: -130.84296, y: -105.25525}
+  - {x: -131.0601, y: -91.024864}
+  - {x: -127.99929, y: -79.122444}
+  - {x: -116.816765, y: -62.78186}
   - {x: -110.94375, y: -57.85934}
   - {x: -107.628914, y: -54.743324}
   - {x: -96.46139, y: -44.594326}
   - {x: -89.967636, y: -38.994843}
-  - {x: -73.31375, y: -25.37078}
-  - {x: -72.10074, y: -23.225388}
-  - {x: -72.06322, y: -22.046661}
-  - {x: -72.96921, y: -20.039658}
-  - {x: -76.75348, y: -18.237526}
-  - {x: -81.71352, y: -17.02195}
-  - {x: -85.892, y: -16.66513}
-  - {x: -89.517105, y: -16.598778}
-  - {x: -94.90457, y: -16.695839}
-  - {x: -97.8063, y: -17.05143}
-  - {x: -113.82531, y: -17.835167}
-  - {x: -134.55652, y: -19.647446}
-  - {x: -141.48936, y: -20.157875}
-  - {x: -151.39839, y: -21.152618}
-  - {x: -155.97314, y: -21.752197}
-  - {x: -161.8614, y: -23.203476}
-  - {x: -168.15067, y: -24.886383}
-  - {x: -170.62874, y: -25.861084}
-  - {x: -174.53424, y: -27.474968}
+  - {x: -85.68991, y: -35.34046}
+  - {x: -77.42936, y: -28.382118}
+  - {x: -75.67292, y: -25.484482}
+  - {x: -76.23513, y: -22.446144}
+  - {x: -79.15996, y: -20.643997}
+  - {x: -84.807556, y: -19.772217}
+  - {x: -89.5017, y: -19.41539}
+  - {x: -97.415565, y: -19.546486}
+  - {x: -105.4716, y: -19.897125}
+  - {x: -112.760826, y: -20.48925}
+  - {x: -123.26345, y: -21.14872}
+  - {x: -136.963, y: -22.523323}
+  - {x: -146.14542, y: -23.276611}
+  - {x: -154.74747, y: -24.174965}
+  - {x: -160.87425, y: -24.937912}
+  - {x: -165.45554, y: -25.654022}
+  - {x: -168.5591, y: -26.275032}
+  - {x: -170.46536, y: -26.596245}
+  - {x: -174.37086, y: -27.720016}
   - {x: -176.61607, y: -28.777779}
   - {x: -179.10693, y: -30.74878}
-  - {x: -181.85686, y: -33.133324}
+  - {x: -181.85684, y: -32.99968}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -3352,7 +3377,7 @@ GameObject:
   - component: {fileID: 2086994624}
   m_Layer: 0
   m_Name: GameObject (2)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3384,7 +3409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
+  checkpointIndex: 2
   isFinishLine: 0
 --- !u!61 &2086994625
 BoxCollider2D:
@@ -3445,7 +3470,7 @@ GameObject:
   - component: {fileID: 2125286474}
   m_Layer: 0
   m_Name: GameObject (20)
-  m_TagString: Untagged
+  m_TagString: CheckPoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3459,7 +3484,7 @@ Transform:
   m_GameObject: {fileID: 2125286472}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -111.6, y: -95.7, z: 0}
+  m_LocalPosition: {x: -108.9, y: -99.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3477,8 +3502,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 865ccc820e133ab4281e97cc0320d321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointIndex: 0
-  isFinishLine: 0
+  checkpointIndex: 23
+  isFinishLine: 1
 --- !u!61 &2125286475
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3513,7 +3538,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.3174667, y: 19.123707}
+  m_Offset: {x: 3.5414124, y: 19.61341}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3523,7 +3548,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.6349335, y: 44.158806}
+  m_Size: {x: 10.904175, y: 45.138214}
   m_EdgeRadius: 0
 --- !u!114 &2133900070 stripped
 MonoBehaviour:
