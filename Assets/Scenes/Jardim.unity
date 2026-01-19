@@ -754,6 +754,14 @@ PrefabInstance:
       value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 4364977639647353558, guid: 3df4569370698b84c8f9b17d5f8db991, type: 3}
+      propertyPath: loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364977639647353558, guid: 3df4569370698b84c8f9b17d5f8db991, type: 3}
+      propertyPath: reachDistance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364977639647353558, guid: 3df4569370698b84c8f9b17d5f8db991, type: 3}
       propertyPath: 'waypoints.Array.data[0]'
       value: 
       objectReference: {fileID: 1710687282}
@@ -3610,11 +3618,41 @@ PrefabInstance:
       propertyPath: 'carLapCounters.Array.data[1]'
       value: 
       objectReference: {fileID: 484309752}
+    - target: {fileID: 8075975335647172696, guid: 7070177519a872d45b2317dda6aa0f82, type: 3}
+      propertyPath: ModoStandard
+      value: 
+      objectReference: {fileID: 1369689132}
+    - target: {fileID: 8075975335647172696, guid: 7070177519a872d45b2317dda6aa0f82, type: 3}
+      propertyPath: CameraElimination
+      value: 
+      objectReference: {fileID: 1369689133}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7070177519a872d45b2317dda6aa0f82, type: 3}
+--- !u!114 &1369689132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7111532583597329295, guid: 7070177519a872d45b2317dda6aa0f82, type: 3}
+  m_PrefabInstance: {fileID: 1369689131}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1151b83d38232e04b88c38c670c331ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1369689133 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2462065062137653771, guid: 7070177519a872d45b2317dda6aa0f82, type: 3}
+  m_PrefabInstance: {fileID: 1369689131}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bdf99c0d68376d499656417e29d6813, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1387098347
 GameObject:
   m_ObjectHideFlags: 0
