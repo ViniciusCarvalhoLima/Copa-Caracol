@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class PlayersPositionUI : MonoBehaviour
 {
     [Header("Referências de corrida")]
@@ -23,6 +24,10 @@ public class PlayersPositionUI : MonoBehaviour
 
     [Header("Ajustes")]
     public float waitTimeout = 2f;
+
+    [SerializeField] private Vector2 normalSize = new Vector2(100, 100);
+    [SerializeField] private Vector2 firstPlaceSize = new Vector2(130, 130);
+
 
     void OnEnable()
     {
@@ -97,17 +102,16 @@ public class PlayersPositionUI : MonoBehaviour
         int p2Pos = player2Car.GetCarPosition();
 
         // Player 1
-        if (p1Pos == 1)
-            SetImage(player1Image, player1Primeiro);
-        else
-            SetImage(player1Image, player1Segundo);
+        bool p1First = p1Pos == 1;
+        SetImage(player1Image, p1First ? player1Primeiro : player1Segundo);
+        SetImageSize(player1Image, p1First);
 
         // Player 2
-        if (p2Pos == 1)
-            SetImage(player2Image, player2Primeiro);
-        else
-            SetImage(player2Image, player2Segundo);
+        bool p2First = p2Pos == 1;
+        SetImage(player2Image, p2First ? player2Primeiro : player2Segundo);
+        SetImageSize(player2Image, p2First);
     }
+
 
     void SetImage(Image img, Sprite sprite)
     {
@@ -116,4 +120,11 @@ public class PlayersPositionUI : MonoBehaviour
         img.sprite = sprite;
         img.enabled = sprite != null;
     }
+
+    void SetImageSize(Image image, bool isFirst)
+    {
+        RectTransform rt = image.rectTransform;
+        rt.sizeDelta = isFirst ? firstPlaceSize : normalSize;
+    }
+
 }

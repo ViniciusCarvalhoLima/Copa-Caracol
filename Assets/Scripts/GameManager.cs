@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,7 +20,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject postRaceUI;
 
     [Header("Corrida")]
+    private bool raceStarted = false;
+
     private List<CarLapCounter> activeCars = new List<CarLapCounter>();
+    [SerializeField] private GameObject countdownPanel;
+    [SerializeField] private TextMeshProUGUI countdownText;
+    [SerializeField] private float countdownTime = 3f;
     private bool raceEnded = false;
 
     void Awake()
@@ -35,6 +42,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         activeCars.AddRange(FindObjectsOfType<CarLapCounter>());
+        StartCoroutine(CountdownCoroutine());
     }
 
     void OnEnable()
@@ -47,13 +55,38 @@ public class GameManager : MonoBehaviour
         CameraElimination.OnCarEliminated -= HandleCarEliminated;
     }
 
+    IEnumerator CountdownCoroutine()
+    {
+        Time.timeScale = 0f;
+        countdownPanel.SetActive(true);
+
+        float timeLeft = countdownTime;
+
+        while (timeLeft > 0)
+        {
+            countdownText.text = Mathf.Ceil(timeLeft).ToString();
+            yield return new WaitForSecondsRealtime(1f);
+            timeLeft--;
+        }
+
+        countdownText.text = "VAI!";
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        countdownPanel.SetActive(false);
+        Time.timeScale = 1f;
+
+        raceStarted = true; // ✅ A CORRIDA COMEÇOU
+    }
+
+
+
     // ======================
     // EVENTOS
     // ======================
 
     void HandleCarEliminated(CarLapCounter car)
     {
-        if (raceEnded) return;
+         if (!raceStarted || raceEnded) return;
 
         if (activeCars.Contains(car))
             activeCars.Remove(car);
@@ -85,7 +118,7 @@ public class GameManager : MonoBehaviour
 
     public void OnCarFinishedRace(CarLapCounter car)
     {
-        if (raceEnded) return;
+         if (!raceStarted || raceEnded) return;
 
         Debug.Log($"🏁 {car.name} terminou a corrida");
         EndRace(car);
@@ -110,6 +143,7 @@ public class GameManager : MonoBehaviour
 
     void ShowPostRaceUI(CarLapCounter winner)
     {
+        StopAllCoroutines();
         if (postRaceUI != null)
             postRaceUI.SetActive(true);
 

@@ -69,3 +69,5 @@ MonoBehaviour:
   player2Primeiro: {fileID: 21300000, guid: b50f3bb34a037f943ac8f65e47538e9b, type: 3}
   player2Segundo: {fileID: 21300000, guid: fba1c3aeebc9c3b4e80842958087a506, type: 3}
   waitTimeout: 2
+  normalSize: {x: 100, y: 100}
+  firstPlaceSize: {x: 128, y: 128}

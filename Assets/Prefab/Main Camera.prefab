@@ -71,7 +71,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 95
+  orthographic size: 90
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -170,5 +170,5 @@ MonoBehaviour:
   smoothTime: 0.15
   timeOutsideCameraToEliminate: 5
   cameraLimits:
-    min: {x: -375, y: -180}
-    max: {x: 375, y: 180}
+    min: {x: -300, y: -150}
+    max: {x: 300, y: 150}
