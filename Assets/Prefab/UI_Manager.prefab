@@ -62,6 +62,10 @@ MonoBehaviour:
   player1Car: {fileID: 0}
   player2Car: {fileID: 0}
   positionHandler: {fileID: 0}
-  player1Text: {fileID: 0}
-  player2Text: {fileID: 0}
+  player1Image: {fileID: 0}
+  player2Image: {fileID: 0}
+  player1Primeiro: {fileID: 21300000, guid: ab6001c2fedfb93439c6cce42ec45387, type: 3}
+  player1Segundo: {fileID: 21300000, guid: a69518a48ff76d34a9e9e9b85d327241, type: 3}
+  player2Primeiro: {fileID: 21300000, guid: b50f3bb34a037f943ac8f65e47538e9b, type: 3}
+  player2Segundo: {fileID: 21300000, guid: fba1c3aeebc9c3b4e80842958087a506, type: 3}
   waitTimeout: 2

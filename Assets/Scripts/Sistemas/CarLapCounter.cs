@@ -93,6 +93,8 @@ public class CarLapCounter : MonoBehaviour
                 if (LapsCompleted > lapsToComplete)
                 {
                     IsRaceCompleted = true;
+                    GameManager.Instance.OnCarFinishedRace(this);
+                    enabled = false;
                     Debug.Log($"[{name}] Corrida COMPLETA! ({lapsToComplete} voltas)");
                 }
             }

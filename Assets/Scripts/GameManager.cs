@@ -4,10 +4,10 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     public enum RaceMode
-{
-    StandardRace,
-    Elimination
-}
+    {
+        StandardRace,
+        Elimination
+    }
 
     public static GameManager Instance;
 
@@ -75,7 +75,6 @@ public class GameManager : MonoBehaviour
         if (activeCars.Count <= 1)
         {
             Debug.Log("🏆 Último carro restante!");
-
             EndRace(activeCars.Count == 1 ? activeCars[0] : null);
         }
     }
@@ -89,7 +88,6 @@ public class GameManager : MonoBehaviour
         if (raceEnded) return;
 
         Debug.Log($"🏁 {car.name} terminou a corrida");
-
         EndRace(car);
     }
 
@@ -103,8 +101,8 @@ public class GameManager : MonoBehaviour
 
         Debug.Log(
             winner != null
-            ? $"🏆 Vencedor: {winner.name}"
-            : "🏁 Corrida encerrada"
+                ? $"🏆 Vencedor: {winner.name}"
+                : "🏁 Corrida encerrada"
         );
 
         ShowPostRaceUI(winner);
@@ -115,6 +113,24 @@ public class GameManager : MonoBehaviour
         if (postRaceUI != null)
             postRaceUI.SetActive(true);
 
-        Time.timeScale = 0f; // pausa jogo
+        Time.timeScale = 0f;
+    }
+
+    // ======================
+    // BOTÕES
+    // ======================
+
+    public void RestartRace()
+    {
+        Time.timeScale = 1f;
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
+        );
+    }
+
+    public void QuitToMainMenu()
+    {
+        Time.timeScale = 1f;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
 }
