@@ -214,11 +214,19 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 99182863159033546, guid: c4091755dd065b2499dcdaccf78bb50f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1259887089943508662, guid: c4091755dd065b2499dcdaccf78bb50f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 766462592}
     - target: {fileID: 1565990077441545374, guid: c4091755dd065b2499dcdaccf78bb50f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072666982018963741, guid: c4091755dd065b2499dcdaccf78bb50f, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -752,6 +760,10 @@ PrefabInstance:
     - target: {fileID: 3432512034446548152, guid: 3df4569370698b84c8f9b17d5f8db991, type: 3}
       propertyPath: m_Name
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 3432512034446548152, guid: 3df4569370698b84c8f9b17d5f8db991, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4364977639647353558, guid: 3df4569370698b84c8f9b17d5f8db991, type: 3}
       propertyPath: loop
@@ -1436,7 +1448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 743156415}
   - component: {fileID: 743156416}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limite externo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1568,9 +1580,10 @@ EdgeCollider2D:
   - {x: 205.30498, y: -121.831474}
   - {x: 199.58134, y: -114.152855}
   - {x: 176.37862, y: -88.642624}
-  - {x: 166.53485, y: -78.70107}
-  - {x: 165.4869, y: -76.030396}
-  - {x: 165.408, y: -73.39964}
+  - {x: 166.21819, y: -77.83025}
+  - {x: 164.85356, y: -75.3179}
+  - {x: 164.86383, y: -73.11861}
+  - {x: 165.64551, y: -70.86635}
   - {x: 167.06364, y: -68.992584}
   - {x: 169.40056, y: -66.14103}
   - {x: 172.36113, y: -63.110806}
@@ -1605,7 +1618,9 @@ EdgeCollider2D:
   - {x: -71.67641, y: -92.39973}
   - {x: -75.59557, y: -92.14679}
   - {x: -79.174126, y: -91.61782}
+  - {x: -80.14927, y: -91.42897}
   - {x: -80.9555, y: -90.49857}
+  - {x: -81.2931, y: -89.3616}
   - {x: -81.015686, y: -88.20224}
   - {x: -76.74877, y: -83.14769}
   - {x: -73.97986, y: -80.455505}
@@ -4881,6 +4896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lesma Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 698463724505256759, guid: 6471737840c959841912c0b465d2e5f7, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1013131093287595123, guid: 6471737840c959841912c0b465d2e5f7, type: 3}
       propertyPath: boostBar
       value: 
@@ -5247,7 +5266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2030960342}
   - component: {fileID: 2030960343}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Limite interno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5359,35 +5378,43 @@ EdgeCollider2D:
   - {x: 135.55438, y: -139.59795}
   - {x: 148.80818, y: -144.53488}
   - {x: 165.56625, y: -155.28104}
-  - {x: 169.54424, y: -156.12712}
-  - {x: 171.63977, y: -155.34706}
-  - {x: 173.45438, y: -152.6598}
-  - {x: 172.23895, y: -149.23306}
+  - {x: 168.09398, y: -156.12712}
+  - {x: 170.3967, y: -155.83047}
+  - {x: 171.57071, y: -155.62329}
+  - {x: 173.10907, y: -153.62663}
+  - {x: 173.31071, y: -151.3771}
+  - {x: 172.23895, y: -148.26622}
   - {x: 170.37022, y: -145.33237}
   - {x: 164.79782, y: -139.13985}
   - {x: 131.7601, y: -108.6317}
-  - {x: 121.637024, y: -100.62029}
-  - {x: 110.66626, y: -87.39527}
-  - {x: 106.80227, y: -75.430176}
+  - {x: 122.00322, y: -100.07101}
+  - {x: 110.66626, y: -86.27215}
+  - {x: 107.749245, y: -79.51064}
+  - {x: 107.2836, y: -74.78839}
+  - {x: 107.787094, y: -72.01364}
   - {x: 108.35565, y: -68.03227}
   - {x: 115.1148, y: -59.63638}
-  - {x: 125.81017, y: -48.844067}
-  - {x: 136.62888, y: -41.77469}
-  - {x: 145.75877, y: -36.90284}
-  - {x: 155.43172, y: -31.944534}
+  - {x: 122.68725, y: -51.92231}
+  - {x: 124.94645, y: -50.031677}
+  - {x: 136.95276, y: -42.53044}
+  - {x: 146.51453, y: -37.442665}
+  - {x: 155.17706, y: -31.944534}
+  - {x: 155.66046, y: -30.740868}
   - {x: 155.0016, y: -29.936226}
   - {x: 152.6462, y: -29.448288}
   - {x: 148.99448, y: -29.284714}
   - {x: 144.87808, y: -29.429924}
   - {x: 135.1353, y: -29.662964}
-  - {x: 130.453, y: -30.65281}
-  - {x: 128.28253, y: -31.321938}
-  - {x: 125.01679, y: -32.378174}
-  - {x: 119.89412, y: -34.36902}
-  - {x: 72.035164, y: -81.823944}
-  - {x: 47.527943, y: -107.93078}
-  - {x: 35.49923, y: -121.30346}
-  - {x: 20.15384, y: -134.76659}
+  - {x: 130.70747, y: -30.228683}
+  - {x: 128.36736, y: -30.304054}
+  - {x: 124.592674, y: -31.445114}
+  - {x: 116.856514, y: -36.438255}
+  - {x: 106.2328, y: -46.817287}
+  - {x: 71.96616, y: -81.27194}
+  - {x: 46.22031, y: -106.51417}
+  - {x: 39.97528, y: -115.100494}
+  - {x: 30.48377, y: -124.903076}
+  - {x: 19.635765, y: -132.86697}
   - {x: 5.3402443, y: -138.00684}
   - {x: -12.9993305, y: -138.29633}
   - {x: -23.96935, y: -137.9497}

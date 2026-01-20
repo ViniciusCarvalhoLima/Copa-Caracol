@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lesma 2 Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4078679036454886068, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5440741410854914610, guid: 4c8cd1ad1d8942a45a63e09ebafebdd6, type: 3}
       propertyPath: MaxSpeed
       value: 78
@@ -161,5 +165,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffd7eb7045cf9ee4c8f3b12853670c3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boostKey: 305
+  boostKey: 98
   boostBar: {fileID: 0}

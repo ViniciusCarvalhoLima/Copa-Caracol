@@ -61,11 +61,11 @@ public class CarController : MonoBehaviour
         else if (controlScheme == ControlScheme.Player2)
         {
             // Player 2 → Setas
-            if (Input.GetKey(KeyCode.UpArrow)) AccelerationInput = 1;
-            else if (Input.GetKey(KeyCode.DownArrow)) AccelerationInput = -1;
+            if (Input.GetKey(KeyCode.I)) AccelerationInput = 1;
+            else if (Input.GetKey(KeyCode.K)) AccelerationInput = -1;
 
-            if (Input.GetKey(KeyCode.LeftArrow)) SteeringInput = -1;
-            else if (Input.GetKey(KeyCode.RightArrow)) SteeringInput = 1;
+            if (Input.GetKey(KeyCode.J)) SteeringInput = -1;
+            else if (Input.GetKey(KeyCode.L)) SteeringInput = 1;
         }
     }
 
