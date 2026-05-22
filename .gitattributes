@@ -1,3 +1,12 @@
+# C#
 *.cs linguist-language=C#
+
+# Ignorar shaders
 *.shader linguist-detectable=false
 *.cginc linguist-detectable=false
+*.hlsl linguist-detectable=false
+
+# Ignorar arquivos gerados pela Unity
+*.meta linguist-generated=true
+*.anim linguist-generated=true
+*.mat linguist-generated=true
